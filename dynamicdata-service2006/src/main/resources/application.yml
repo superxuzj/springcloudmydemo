@@ -1,0 +1,25 @@
+server:
+  port: 2006
+spring:
+  application:
+    name: dynamic-data-service
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master: # 默认为主库
+          url: jdbc:mysql://39.107.246.93:3306/seata_order
+          username: root
+          password: Password_2019
+          driver-class-name: com.mysql.jdbc.Driver
+#        slave:    如果不用 spel 表达式  可以用 master + slave 这种方式定义
+#          one:
+#            username: root
+#            password: root
+#            driverclassname: com.mysql.jdbc.Driver
+#            url: jdbc:mysql://127.0.0.1:3306/slave?characterEncoding=utf8&useSSL=false
+#          two:
+#            username: root
+#            password: root
+#            driverclassname: com.mysql.jdbc.Driver
+#            url: jdbc:mysql://127.0.0.1:3306/slave2?characterEncoding=utf8&useSSL=false

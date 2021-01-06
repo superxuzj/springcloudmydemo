@@ -28,6 +28,7 @@
         <module>seata-order-service2002</module>
         <module>seata-order-service2003</module>
         <module>dynamicdata-service2005</module>
+        <module>dynamicdata-service2006</module>
     </modules>
     <packaging>pom</packaging>
 
