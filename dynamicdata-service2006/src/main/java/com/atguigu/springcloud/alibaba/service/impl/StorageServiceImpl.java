@@ -2,6 +2,7 @@ package com.atguigu.springcloud.alibaba.service.impl;
 
 import com.atguigu.springcloud.alibaba.dao.StorageDao;
 import com.atguigu.springcloud.alibaba.service.StorageService;
+import com.baomidou.dynamic.datasource.annotation.DS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import javax.annotation.Resource;
 
 
 @Service
+@DS("slave2")
 public class StorageServiceImpl implements StorageService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StorageServiceImpl.class);

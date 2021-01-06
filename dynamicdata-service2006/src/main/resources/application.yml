@@ -12,14 +12,29 @@ spring:
           username: root
           password: Password_2019
           driver-class-name: com.mysql.jdbc.Driver
-#        slave:    如果不用 spel 表达式  可以用 master + slave 这种方式定义
-#          one:
-#            username: root
-#            password: root
-#            driverclassname: com.mysql.jdbc.Driver
-#            url: jdbc:mysql://127.0.0.1:3306/slave?characterEncoding=utf8&useSSL=false
-#          two:
-#            username: root
-#            password: root
-#            driverclassname: com.mysql.jdbc.Driver
-#            url: jdbc:mysql://127.0.0.1:3306/slave2?characterEncoding=utf8&useSSL=false
+        slave2:
+          username: root
+          password: Password_2019
+          driverclassname: com.mysql.jdbc.Driver
+          url: jdbc:mysql://39.107.246.93:3306/seata_storage?characterEncoding=utf8&useSSL=false
+        slave3:
+          username: root
+          password: Password_2019
+          driverclassname: com.mysql.jdbc.Driver
+          url: jdbc:mysql://39.107.246.93:3306/seata_account?characterEncoding=utf8&useSSL=false
+      seata: true # 是否启动对 Seata 的集成
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+## 分布式事务组件Seata 配置项
+seata:
+  application-id: ${spring.application.name} # Seata 应用编号，默认为 ${spring.application.name}
+  tx-service-group: ${spring.application.name}-group # Seata 事务组编号，用于 TC 集群名
+  # Seata 服务配置项，对应 ServiceProperties 类
+  service:
+    vgroup-mapping:
+      dynamic-data-service-group: default
+      #（注：tx-service-group值要与该项名称一致）
+    grouplist:
+      default: localhost:8091
