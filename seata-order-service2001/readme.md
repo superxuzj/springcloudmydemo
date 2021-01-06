@@ -1,0 +1,1 @@
+file.conf和registry.conf放在resource目录下
