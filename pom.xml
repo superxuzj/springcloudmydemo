@@ -29,6 +29,8 @@
         <module>seata-order-service2003</module>
         <module>dynamicdata-service2005</module>
         <module>dynamicdata-service2006</module>
+        <module>rabbitmq-producer-8011</module>
+        <module>rabbitmq-comsumer-8012</module>
     </modules>
     <packaging>pom</packaging>
 
