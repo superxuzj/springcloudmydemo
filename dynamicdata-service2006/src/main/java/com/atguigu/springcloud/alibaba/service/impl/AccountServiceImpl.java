@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
 
         LOGGER.info("------->account-service中扣减账户余额开始");
         //try { TimeUnit.SECONDS.sleep(20); } catch (InterruptedException e) { e.printStackTrace(); }
-        int a = 10/0;
+        //int a = 10/0;
         accountDao.decrease(userId,money);
 
         LOGGER.info("------->account-service中扣减账户余额结束");

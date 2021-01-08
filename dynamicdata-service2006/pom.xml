@@ -26,9 +26,14 @@
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-all</artifactId>
-            <version>1.4.0</version>
+            <version>1.1.0</version>
         </dependency>
 
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!--web-actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -22,7 +22,6 @@ spring:
           password: Password_2019
           driverclassname: com.mysql.jdbc.Driver
           url: jdbc:mysql://39.107.246.93:3306/seata_account?characterEncoding=utf8&useSSL=false
-      seata: true # 是否启动对 Seata 的集成
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
@@ -30,11 +29,11 @@ mybatis:
 ## 分布式事务组件Seata 配置项
 seata:
   application-id: ${spring.application.name} # Seata 应用编号，默认为 ${spring.application.name}
-  tx-service-group: ${spring.application.name}-group # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: dynamic-data-service-fescar-service-group # Seata 事务组编号，用于 TC 集群名
   # Seata 服务配置项，对应 ServiceProperties 类
   service:
-    vgroup-mapping:
-      dynamic-data-service-group: default
+    vgroupMapping:
+      dynamic-data-service-fescar-service-group: default
       #（注：tx-service-group值要与该项名称一致）
     grouplist:
       default: localhost:8091
