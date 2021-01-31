@@ -31,6 +31,8 @@
         <module>dynamicdata-service2006</module>
         <module>rabbitmq-producer-8011</module>
         <module>rabbitmq-comsumer-8012</module>
+        <module>elk-logback</module>
+        <module>efk-logback</module>
     </modules>
     <packaging>pom</packaging>
 

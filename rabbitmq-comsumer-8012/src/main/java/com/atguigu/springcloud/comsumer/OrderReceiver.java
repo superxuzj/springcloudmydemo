@@ -5,6 +5,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -17,7 +18,7 @@ public class OrderReceiver {
 
 
     //监听消息队列
-    @RabbitListener(queues = "delay_queue")
+    @RabbitListener(queues = "user.order.receive_queue")
     public void consumeMessage(OrderMaster order) throws IOException {
         try {
             //如果订单状态不是0 说明订单已经被其他消费队列改动过了 加一个状态用来判断集群状态的情况
@@ -25,6 +26,7 @@ public class OrderReceiver {
                 //设置订单过去状态
                 order.setOrderStatus(-1);
                 System.out.println(order.getBuyerName());
+                System.out.println(new Date());
                 //orderMasterService.updateByPrimaryKeySelective(order);
             }
         } catch (Exception e) {

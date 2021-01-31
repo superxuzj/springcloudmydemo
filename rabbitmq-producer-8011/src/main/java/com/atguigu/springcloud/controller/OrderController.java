@@ -1,16 +1,21 @@
 package com.atguigu.springcloud.controller;
 
 import com.atguigu.springcloud.entities.OrderMaster;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
  * @author zhijian.xu
  * @date 2021/1/8
  **/
+@RestController
+@Slf4j
 public class OrderController {
 
     @Autowired
@@ -28,9 +33,10 @@ public class OrderController {
         orderMaster.setOrderId(UUID.randomUUID().toString().replaceAll("-", ""));
         //TODO：设置超时，用mq处理已超时的下单记录（一旦记录超时，则处理为无效）
         rabbitTemplate.convertAndSend("user.order.delay_exchange", "user.order.delay_key", orderMaster, message -> {
-            message.getMessageProperties().setExpiration("3000");
+            message.getMessageProperties().setExpiration("10000");
             return message;
         });
+        System.out.println(new Date());
         return "创建订单成功";
     }
 

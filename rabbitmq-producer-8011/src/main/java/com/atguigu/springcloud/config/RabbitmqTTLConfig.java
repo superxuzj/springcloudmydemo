@@ -67,6 +67,7 @@ public class RabbitmqTTLConfig {
      */
     @Bean
     public Queue userOrderReceiveQueue() {
+
         return new Queue("user.order.receive_queue");
     }
 
