@@ -1,0 +1,8 @@
+server:
+  port: 2006
+spring:
+  application:
+    name: elk-logback-service
+  profiles:
+    active: test
+  

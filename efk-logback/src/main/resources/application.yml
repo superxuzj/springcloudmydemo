@@ -1,0 +1,8 @@
+server:
+  port: 2007
+spring:
+  application:
+    name: efk-logback-service
+  profiles:
+    active: test
+  
