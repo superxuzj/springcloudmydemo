@@ -33,6 +33,7 @@
         <module>rabbitmq-comsumer-8012</module>
         <module>elk-logback</module>
         <module>efk-logback</module>
+        <module>shiro-demo</module>
     </modules>
     <packaging>pom</packaging>
 
