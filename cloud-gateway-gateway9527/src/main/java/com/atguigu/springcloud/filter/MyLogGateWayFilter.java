@@ -14,7 +14,7 @@ import java.util.Date;
 
 @Component
 @Slf4j
-public class MyLogGateWayFilter implements GlobalFilter,Ordered {
+public class  MyLogGateWayFilter implements GlobalFilter,Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 

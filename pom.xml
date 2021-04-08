@@ -34,6 +34,7 @@
         <module>elk-logback</module>
         <module>efk-logback</module>
         <module>shiro-demo</module>
+        <module>test</module>
     </modules>
     <packaging>pom</packaging>
 
