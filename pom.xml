@@ -35,6 +35,7 @@
         <module>efk-logback</module>
         <module>shiro-demo</module>
         <module>test</module>
+        <module>cloud-config-nacos-client-3377</module>
     </modules>
     <packaging>pom</packaging>
 
