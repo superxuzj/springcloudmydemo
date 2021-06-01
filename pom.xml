@@ -38,7 +38,7 @@
 
 
         <module>cloud-config-nacos-client-3377</module>
-        <module>transaction-test事务</module>
+        <module>test-transaction8801</module>
     </modules>
     <packaging>pom</packaging>
 
