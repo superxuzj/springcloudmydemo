@@ -11,6 +11,7 @@
         <module>cloud-provider-payment8001</module>
         <module>cloud-consumer-order80</module>
         <module>cloud-api-commons</module>
+        <module>cloud-config-nacos-client-3377</module>
         <module>cloud-eureka-server7001</module>
         <module>cloud-eureka-server7002</module>
         <module>cloud-provider-payment8002</module>
@@ -34,9 +35,10 @@
         <module>elk-logback</module>
         <module>efk-logback</module>
         <module>test-unit</module>
-        <module>shiro-demo</module>
-        <module>test</module>
+
+
         <module>cloud-config-nacos-client-3377</module>
+        <module>transaction-test事务</module>
     </modules>
     <packaging>pom</packaging>
 
