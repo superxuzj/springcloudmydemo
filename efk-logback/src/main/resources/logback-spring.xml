@@ -138,7 +138,7 @@
         <maxQueueSize>999</maxQueueSize>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <!--<pattern><![CDATA[%date{YYYY-MM-DD mm:ss.SSS} [%thread] %-5level %logger{15}#%line %msg]]></pattern>-->
-            <pattern><![CDATA[%date{[YYYY-MM-DD HH:mm:SS]} %-5level %msg]]></pattern>
+            <pattern><![CDATA[%date{[YYYY-MM-DD HH:mm:ss]} %-5level %msg]]></pattern>
         </layout>
     </appender>
 

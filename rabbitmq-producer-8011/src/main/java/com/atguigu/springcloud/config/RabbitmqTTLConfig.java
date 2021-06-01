@@ -18,7 +18,7 @@ import java.util.Map;
 @Configuration
 public class RabbitmqTTLConfig {
     /**
-     * 死信交换机
+     * 死信 延迟交换机
      *
      * @return
      */
@@ -28,20 +28,22 @@ public class RabbitmqTTLConfig {
     }
 
     /**
-     * 死信队列
+     * 死信 延迟队列
      *
      * @return
      */
     @Bean
     public Queue userOrderDelayQueue() {
         Map<String, Object> map = new HashMap<>(16);
+        //如果消息过时，则会被投递到当前对应的交换机
         map.put("x-dead-letter-exchange", "user.order.receive_exchange");
+        //如果消息过时，user.order.receive_exchange交换机会根据user.order.receive_key投递消息到对应的队列
         map.put("x-dead-letter-routing-key", "user.order.receive_key");
         return new Queue("user.order.delay_queue", true, false, false, map);
     }
 
     /**
-     * 给死信队列绑定交换机
+     * 给延迟队列绑定交换机
      *
      * @return
      */

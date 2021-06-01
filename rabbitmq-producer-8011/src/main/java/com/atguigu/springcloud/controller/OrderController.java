@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
+ * RabbitMQ 死信队列与延时队列
  * @author zhijian.xu
  * @date 2021/1/8
  **/

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: nocos-config-client
+  profiles:
+    active: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 123.56.104.71:8849
+      config:
+        server-addr: 123.56.104.71:8849
+        file-extension: yaml
