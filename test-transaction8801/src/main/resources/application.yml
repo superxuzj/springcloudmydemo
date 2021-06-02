@@ -9,3 +9,9 @@ spring:
     username: root
     password: password2019
     url: jdbc:mysql://39.97.255.173:3306/cloud_xr?useUnicode=true&characterEncoding=utf8
+
+mybatis-plus:
+  #mapper-locations: classpath:mappers/*Mapper.xml    # mapper映射文件
+  global-config:
+    db-config:
+      table-prefix: xr_
