@@ -13,14 +13,10 @@
         <module>cloud-api-commons</module>
         <module>cloud-config-nacos-client-3377</module>
         <module>cloud-eureka-server7001</module>
-        <module>cloud-eureka-server7002</module>
-        <module>cloud-provider-payment8002</module>
         <module>cloud-providerconsul-payment8006</module>
-        <module>cloud-consumerconsul-order80</module>
         <module>cloud-consumer-feign-order80</module>
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-feign-hystrix-order80</module>
-        <module>cloud-consumer-hystrix-dashboard9001</module>
         <module>cloud-gateway-gateway9527</module>
         <module>cloudalibaba-provider-payment9001</module>
         <module>cloudalibaba-provider-payment9002</module>
@@ -34,8 +30,6 @@
         <module>rabbitmq-comsumer-8012</module>
         <module>elk-logback</module>
         <module>efk-logback</module>
-        <module>test-unit</module>
-
 
         <module>cloud-config-nacos-client-3377</module>
         <module>test-transaction8801</module>
